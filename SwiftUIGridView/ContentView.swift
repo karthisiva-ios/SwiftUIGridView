@@ -12,6 +12,7 @@ let companines = [Companies(id:1,name: "Grifffin Infosystems"),Companies(id:2,na
 struct ContentView: View {
     var body: some View {
         VStack() {
+            //First update to Remote
             Text("List of companies and its status").font(.largeTitle)
             CustomeView()
         }.padding(.top,30)
