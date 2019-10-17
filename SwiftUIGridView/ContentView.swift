@@ -13,8 +13,9 @@ struct ContentView: View {
     var body: some View {
         VStack() {
             //First update to Remote
-            Text("List of companies and its status").font(.largeTitle)
-            CustomeView()
+//            Text("List of companies and its status").font(.largeTitle)
+//            CustomeView()
+            MyGridView()
         }.padding(.top,30)
         
     }
@@ -23,6 +24,25 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+struct MyGridView : View {
+var body: some View {
+    List() {
+        ForEach(0..<8) { indexRow  in
+            HStack {
+                ForEach(0..<2) { index in
+                    VStack(){
+                    Image("baby")
+                        .resizable()
+                        .scaledToFit()
+                        Text("Baby Row - \(indexRow) of \(index)").font(.caption)
+
+                        }
+                 }
+                }
+            }
+        }
     }
 }
 struct CustomeView : View {
